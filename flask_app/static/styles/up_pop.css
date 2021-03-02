@@ -1,0 +1,104 @@
+body {
+    background-image: url("https://background-tiles.com/overview/black/patterns/large/1036.png");
+    background-repeat: repeat;
+    margin: 0 auto;
+  }
+
+.header_bar{
+    background: orange;
+    color: white;
+    margin: 0 auto;
+    line-height: 200%;
+}
+
+.header_bar p{
+    margin: 0 1% 0 1%;
+}
+
+.main_heading{
+    background-color: #ECEBEB;
+    color: black;
+    margin: 1%;
+    padding: 1%;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.main_heading p, h1{
+    margin: 0 auto;
+    padding: 2px;
+}
+
+.path_line{
+    background-color: white;
+    line-height: 200%;
+    padding-left: 10px;
+    margin: 0 auto;
+}
+
+.status_line{
+    background-color: white;
+    line-height: 100px;
+    border-radius: 25px;
+    margin: 1%;
+    padding-left: 10px;
+}
+
+.main_column{
+    width: 68%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.main_column img{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.shp_table{
+    width: 100%;
+    line-height: 20px;
+    display: block;
+    margin: auto;
+    overflow: scroll;
+    height: 380px;
+    font-size: small;
+}
+
+.shp_table th{
+    background-color: MediumSeaGreen;
+    color: white;
+    line-height: 40px;
+}
+
+.shp_table td{
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+.filter_column{
+    width: 27%;
+}
+
+.statistics{
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.main_column, .filter_column{
+    float: left;
+    margin: 1%;
+    background-color: #ECEBEB;
+}
+
+.bottom_bar{
+    background-color: orange;
+    float: left;
+    width: 100%;
+}
+
+.bottom_bar p{
+    margin: 0 1% 0 1%;
+    line-height: 200%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/styles/up_pop.css">
+    <title>UP Portal</title>
+</head>
+<body>
+    <div class="header_bar">
+        <p><span>About Sitemap Search</span> <span style="float: right;">English|हिन्दी</span></p>
+    </div>
+    <div class="main_heading">
+        <div style="float: left; width: 100px;">
+            <img src="static/images/up_logo.webp" width="70px">
+        </div>
+
+        <div>
+            <h1>Uttar Pradesh Information Portal</h1>
+            <p>Information Portal</p>
+        </div>
+        
+    </div>
+
+    <div class="path_line">
+        <p>Home/U.P. Portal</p>
+    </div>
+
+    <div class="status_line">
+        <p>AQI Weather COVID CASE</p>
+    </div>
+
+    <div class="main_column">
+        <div style="border: 1px solid; margin: auto; width: 100%;">
+            <img src="{{path_to_image}}" alt="Shapefile Display">
+        </div>
+
+        <div class="shp_table">
+            {{table_n|safe}}
+        </div>
+    </div>
+
+    <div class="filter_column">
+        <p>Right Column</p>
+
+        <div class="statistics">
+            <p>Here are some statistics</p>
+            <p>Total Population: </p>
+            <p>No of Districts: </p>
+            <p>Maximum Density: </p>
+        </div>
+    </div>
+
+    <div class="bottom_bar">
+        <p>Bottom Bar</p>
+    </div>
+</body>
+</html>
