@@ -1,5 +1,6 @@
 import xlsxwriter
 import pandas as pd
+import os
 
 
 class PointTable:
@@ -39,25 +40,29 @@ class OutputExcel:
 
     def create_sheet(self):
         self.workbook = xlsxwriter.Workbook(self.path)
-        self.worksheet = self.workbook.add_worksheet('SheetN')
+        self.worksheet = self.workbook.add_worksheet('Sheet1')
 
     def write_heading(self, heading):
         for i, column in enumerate(heading):
             self.worksheet.write(0, i, column)
 
     def write_data(self, dataframe):
-        for row_num, row in dataframe.iterrows():
+        row_num = 0  # Because iterrows returns index
+        for index, row in dataframe.iterrows():
             a_row = list(row)
+            print(a_row)
             for col_num, cell_value in enumerate(a_row):
+                print("RowNo: {}, ColNo:{}, Value:{}".format(row_num + 1, col_num, cell_value))
                 self.worksheet.write(row_num + 1, col_num, cell_value)  # +1 for Headings
+            row_num += 1
 
     def add_chart(self, col_length):
         # Create a new chart object.
         chart = self.workbook.add_chart({'type': 'line'})
 
         # Add a series to the chart.
-        chart.add_series({'categories': '=SheetN!$C$2:$C${}'.format(col_length + 1),
-                          'values': '=SheetN!$F$2:$F${}'.format(col_length + 1),
+        chart.add_series({'categories': '=Sheet1!$B$2:$B${}'.format(col_length + 1),
+                          'values': '=Sheet1!$C$2:$C${}'.format(col_length + 1),
                           'smooth': 'TRUE'})
 
         # Insert the chart into the worksheet.
@@ -70,26 +75,29 @@ class OutputExcel:
 def main():
     points = PointTable(
         excel_path=r"D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\PointsExcel\CG_Points_Elv_Shrunk.csv")
-    output_folder = r"D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\TestDir"
-    output_excel = OutputExcel(
-        path=r'D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\TestDir\Stream1_Test_with_Chart.xlsx')
+    output_folder = r"D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\CG_OutputExcel_LongitudinalSection"
 
     points.read_csv()
 
     for i in range(1, points.get_max_streams() + 1):
         print("Working for stream: {}".format(i))
-        df2 = points.df.loc[points.df['ARCID'] == i]
+        df2 = points.df.loc[points.df['ARCID'] == i].copy()
         print(df2)
         col_length = len(df2.index)
 
         # table = InputTable(csv_path=r'D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\TestDir\Stream1_Test_Excel.csv')
         #
         # # table.read_from_csv(csv_path=r'')
+        output_path = os.path.join(output_folder, "CG_StreamID_{}_LongitudinalSec.xlsx".format(i))
+        print("\tSaving at: {}".format(output_path))
+
+        output_excel = OutputExcel(path=output_path)
         output_excel.create_sheet()
         output_excel.write_heading(points.column_heads)
         output_excel.write_data(dataframe=df2)
         output_excel.add_chart(col_length=col_length)
         output_excel.save()
+
 
 
 main()
