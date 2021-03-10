@@ -66,36 +66,5 @@ def main():
         excel.clear_graph()
 
 
-# def main():
-#     excel_folder = r'D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualExcels'
-#     output_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualCharts"
-#
-#     excels = os.listdir(excel_folder)
-#     for i, excel in enumerate(excels):
-#         stream_id = excel.split("_")[2]
-#         print(
-#             "Progress: [{}/{}] {}% ||| Currently Working: {}".format(i + 1, len(excels), ((i + 1) / len(excels)) * 100,
-#                                                                      stream_id))
-#         print(excel)
-#         excel_path = os.path.join(excel_folder, excel)
-#
-#         df = pd.read_excel(excel_path)
-#         # print(df)
-#         title = "Longitudinal Section (Stream ID: {})".format(stream_id)
-#         df_line = df.plot.line(x='cum_dist', y='Elevation', title=title, legend=False, xlabel='Distance (m)',
-#                                ylabel='Elevation (m)', figsize=(5.95, 2.8))
-#         otuput_image_name = "Stream_{}_LongitudinalSection.png".format(stream_id)
-#         save_path = os.path.join(output_folder, otuput_image_name)
-#         # df_line.figure(figsize=(20, 10))
-#         plt.tight_layout()
-#         df_line.grid(b=None, which='major', axis='y')
-#         # plt.show()
-#         plt.savefig(save_path, dpi=180)
-#
-#         # Clear figure for memory management
-#         plt.cla()
-#         plt.clf()
-#         plt.close()
-
 
 main()

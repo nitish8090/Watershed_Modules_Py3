@@ -20,17 +20,6 @@ class PointTable:
         return int(self.df.iloc[self.df.shape[0] - 1]['ARCID'])
 
 
-# class InputTable:
-#     def __init__(self):
-#         self.df = None
-#         self.columns = []
-#
-#     def read_from_csv(self, csv_path):
-#         self.df = pd.read_csv(csv_path)
-#         self.columns = list(self.df.columns)
-#
-#     def create_df
-
 
 class OutputExcel:
     def __init__(self, path):
@@ -85,9 +74,6 @@ def main():
         print(df2)
         col_length = len(df2.index)
 
-        # table = InputTable(csv_path=r'D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\TestDir\Stream1_Test_Excel.csv')
-        #
-        # # table.read_from_csv(csv_path=r'')
         output_path = os.path.join(output_folder, "MP_StreamID_{}_LongitudinalSec.xlsx".format(i))
         print("\tSaving at: {}".format(output_path))
 

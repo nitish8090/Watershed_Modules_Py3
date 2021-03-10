@@ -4,8 +4,9 @@ from PIL import Image
 
 def main():
     image_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualCharts"
-    # test_save = r"F:\Watershed_Works\2102 Feb 2021\CG_Longitudinal_Section\ImagesLongSec\test\test.png"
     output_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\TripletCharts"
+
+    # Count three numbers at a time
     third_counter = 0
     for i in range(1, 1279 + 1):
         print("Index: {}".format(i))
