@@ -3,11 +3,11 @@ from PIL import Image
 
 
 def main():
-    image_folder = r"F:\Watershed_Works\2102 Feb 2021\CG_Longitudinal_Section\ImagesLongSec"
-    test_save = r"F:\Watershed_Works\2102 Feb 2021\CG_Longitudinal_Section\ImagesLongSec\test\test.png"
-    output_folder = r"F:\Watershed_Works\2102 Feb 2021\CG_Longitudinal_Section\combines_images"
+    image_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualCharts"
+    # test_save = r"F:\Watershed_Works\2102 Feb 2021\CG_Longitudinal_Section\ImagesLongSec\test\test.png"
+    output_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\TripletCharts"
     third_counter = 0
-    for i in range(1, 1237):
+    for i in range(1, 1279 + 1):
         print("Index: {}".format(i))
         if third_counter == 0:
             print("\t\tCreating new image, i: {}".format(i))
@@ -27,7 +27,7 @@ def main():
         h = h + 500
 
         if third_counter == 2:
-            image_name = "CG_Long_Sec_{}_{}_{}.png".format(i-2, i-1, i)
+            image_name = "MP_Long_Sec_{}_{}_{}.png".format(i-2, i-1, i)
             path = os.path.join(output_folder, image_name)
             print("\t\tSaving at: {}".format(path))
             img.save(path, "PNG")

@@ -1,2 +1,5 @@
-for i in range(1, 1237):
-    print(i)
+import os
+output_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualExcels.jpg"
+
+a = os.path.split(output_folder)
+print(a)

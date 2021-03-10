@@ -74,8 +74,8 @@ class OutputExcel:
 
 def main():
     points = PointTable(
-        excel_path=r"D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\PointsExcel\CG_Points_Elv_Shrunk.csv")
-    output_folder = r"D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\CG_OutputExcel_LongitudinalSection"
+        excel_path=r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\CSV\MP_LongSec_Point_WithElevation.csv")
+    output_folder = r"D:\Nitish\26_States\2_MP\MP_LongitudinalSection\IndividualExcels"
 
     points.read_csv()
 
@@ -88,7 +88,7 @@ def main():
         # table = InputTable(csv_path=r'D:\Nitish\2102_Feb\17_CG_LongitudinalSectionPDF\TestDir\Stream1_Test_Excel.csv')
         #
         # # table.read_from_csv(csv_path=r'')
-        output_path = os.path.join(output_folder, "CG_StreamID_{}_LongitudinalSec.xlsx".format(i))
+        output_path = os.path.join(output_folder, "MP_StreamID_{}_LongitudinalSec.xlsx".format(i))
         print("\tSaving at: {}".format(output_path))
 
         output_excel = OutputExcel(path=output_path)
