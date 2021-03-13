@@ -74,10 +74,10 @@ groups = {'Drought': ['RRV_P_DROUGHT.png', 'Vul_P_DROUGHT.png', 'Res_P_DROUGHT.p
 # 'WHI_C.png'
 
 def main():
-    cimp_group = CIMPGroup(r'D:\Nitish\2102_Feb\4_PolygonToRaster\piCharts5')
+    cimp_group = CIMPGroup(r'D:\Nitish\2103_Mar\3_PiCharts\piCharts')
     cimp_group.set_cimps()
 
-    output_folder = r"D:\Nitish\2102_Feb\4_PolygonToRaster\Stiched_Images4"
+    output_folder = r"D:\Nitish\2103_Mar\3_PiCharts\StichedImages"
 
     stuff_folder = r"D:\Nitish\2102_Feb\4_PolygonToRaster\stitching_stuff2"
     legend_path = os.path.join(stuff_folder, "legend.png")

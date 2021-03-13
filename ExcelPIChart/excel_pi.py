@@ -43,6 +43,7 @@ class ResRel:
                            "(2041-2060)",
                            "(2061-2080)",
                            "(2081-2100)"]
+        print(self.df)
         # labels = self.df['Reliability.1'][9:14]
         # axes = self.df.S1[9:14]
 
@@ -75,8 +76,8 @@ class ResRel:
 
 
 def main():
-    cimp_list = CIMPList(r"D:\Nitish\2102_Feb\4_PolygonToRaster\newExcel")
-    pi_folder_path = r"D:\Nitish\2102_Feb\4_PolygonToRaster\piCharts5"
+    cimp_list = CIMPList(r"D:\Nitish\2103_Mar\3_PiCharts\piExcel")
+    pi_folder_path = r"D:\Nitish\2103_Mar\3_PiCharts\piCharts"
 
     for cimp in cimp_list.list:
         print("Inside: {}".format(cimp.name))
