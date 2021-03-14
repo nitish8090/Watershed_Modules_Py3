@@ -1,11 +1,7 @@
-n = 19
+import openpyxl
 
-triplet_list = [(i * 3 - 2, i * 3 - 1, i * 3) for i in range(1, int(n / 3) + 1)]
-print(triplet_list)
+wb  = openpyxl.open(r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Excels\CMIP5RCPP45.xlsx")
+print(wb)
 
-triplet_list = [[i*3+p for p in range(-2, 1)] for i in range(1, int(n / 3) + 1)]
-print(triplet_list)
-
-i = 3
-alo = [p for p in range(-2, 1)]
-print(alo)
+names = wb.sheetnames
+print(names)

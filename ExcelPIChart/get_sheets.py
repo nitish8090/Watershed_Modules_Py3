@@ -1,9 +1,9 @@
-import xlrd
+import openpyxl
 import os
 
 
 def main():
-    excel_folder = r"D:\Nitish\2103_Mar\3_PiCharts\Round2\piExcel"
+    excel_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Excels"
 
     excels = os.listdir(excel_folder)
 
@@ -13,8 +13,8 @@ def main():
         print(excel)
         excel_path = os.path.join(excel_folder, excel)
 
-        workbook = xlrd.open_workbook(excel_path)
-        sheets = workbook.sheet_names()
+        workbook = openpyxl.open(excel_path)
+        sheets = workbook.sheetnames
 
         print(sheets)
 

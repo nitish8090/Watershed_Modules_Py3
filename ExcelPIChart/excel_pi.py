@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import xlrd
+import openpyxl
 import pandas as pd
 import os
 
@@ -23,8 +23,8 @@ class CIMP:
         self.sheet_list = []
 
     def read_sheet_list(self):
-        xls = xlrd.open_workbook(self.path, on_demand=True)
-        self.sheet_list = xls.sheet_names()
+        xls = openpyxl.open(self.path)
+        self.sheet_list = xls.sheetnames
 
 
 class ResRel:
@@ -76,8 +76,8 @@ class ResRel:
 
 
 def main():
-    cimp_list = CIMPList(r"D:\Nitish\2103_Mar\3_PiCharts\piExcel")
-    pi_folder_path = r"D:\Nitish\2103_Mar\3_PiCharts\piCharts"
+    cimp_list = CIMPList(r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Excels")
+    pi_folder_path = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\PiCharts"
 
     for cimp in cimp_list.list:
         print("Inside: {}".format(cimp.name))
