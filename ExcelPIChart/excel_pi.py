@@ -77,8 +77,13 @@ class ResRel:
 
 
 def main():
+<<<<<<< HEAD
     cimp_list = CIMPList(r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\Excel")
     pi_folder_path = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts"
+=======
+    cimp_list = CIMPList(r"D:\Nitish\2103_Mar\3_PiCharts\Round2\piExcel")
+    pi_folder_path = r"D:\Nitish\2103_Mar\3_PiCharts\Round2\piCharts"
+>>>>>>> c7f9e03c2dd3d61ff472308eeccd0b3db9602b5c
 
     for cimp in cimp_list.list:
         print("Inside: {}".format(cimp.name))
