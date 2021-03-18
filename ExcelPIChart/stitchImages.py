@@ -77,10 +77,10 @@ groups = {'Combined': ['WHI.png', 'VUL.png', 'RES.png', 'REL.png']}
 # 'WHI_C.png'
 
 def main():
-    cimp_group = CIMPGroup(r'F:\Watershed_Works\2103 Mar 2021\1_PiExcel\PiCharts')
+    cimp_group = CIMPGroup(r'F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts')
     cimp_group.set_cimps()
 
-    output_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\PiCharts_Stitched"
+    output_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts_stictched"
 
     stuff_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\4_PolygonToRaster\stitching_stuff2"
     legend_path = os.path.join(stuff_folder, "legend.png")

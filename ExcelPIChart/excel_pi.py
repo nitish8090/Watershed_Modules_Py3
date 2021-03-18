@@ -36,6 +36,7 @@ class ResRel:
     def read_dataframe(self):
         self.df = pd.read_excel(self.path, self.sheet)
         self.df = self.df.iloc[9:14, 9:15]
+        print(self.df)
         self.df = self.df.reset_index(drop=True)
         self.df.set_index(self.df.columns[0], inplace=True)
         self.df.columns = ["(1981-2019)",
@@ -76,8 +77,8 @@ class ResRel:
 
 
 def main():
-    cimp_list = CIMPList(r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Excels")
-    pi_folder_path = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\PiCharts"
+    cimp_list = CIMPList(r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\Excel")
+    pi_folder_path = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts"
 
     for cimp in cimp_list.list:
         print("Inside: {}".format(cimp.name))
