@@ -63,24 +63,24 @@ class CombinedImage:
         self.image.paste(new_image, (self.heading_image.size[0], y))
 
 
-# groups = {'Drought': ['RRV_P_DROUGHT.png', 'Vul_P_DROUGHT.png', 'Res_P_DROUGHT.png', 'Rel_P_DROUGHT.png'],
-#           'GW': ['RRV_PERC_GW.png', 'Vul_PERC_GW.png', 'Res_PERC_GW.png', 'Rel_PERC_GW.png'],
-#           'PET': ['RRV_PET.png', 'Vul_PET.png', 'Res_PET.png', 'Rel_PET.png'],
-#           'SURQ_HIGH': ['RRV_SURQ_HIGH.png', 'Vul_SURQ_HIGH.png', 'Res_SURQ_HIGH.png', 'Rel_SURQ_HIGH.png'],
-#           'SYLD': ['RRV_SYLD.png', 'Vul_SYLD.png', 'Res_SYLD.png', 'Rel_SYLD.png'],
-#           'WHI': ['WHI.png', 'Vul_WHI.png', 'Res_WHI.png', 'Rel_WHI.png']}
+groups = {'Drought': ['RRV_P_DROUGHT.png', 'Vul_P_DROUGHT.png', 'Res_P_DROUGHT.png', 'Rel_P_DROUGHT.png'],
+          'GW': ['RRV_PERC_GW.png', 'Vul_PERC_GW.png', 'Res_PERC_GW.png', 'Rel_PERC_GW.png'],
+          'PET': ['RRV_PET.png', 'Vul_PET.png', 'Res_PET.png', 'Rel_PET.png'],
+          'SURQ_HIGH': ['RRV_SURQ_HIGH.png', 'Vul_SURQ_HIGH.png', 'Res_SURQ_HIGH.png', 'Rel_SURQ_HIGH.png'],
+          'SYLD': ['RRV_SYLD.png', 'Vul_SYLD.png', 'Res_SYLD.png', 'Rel_SYLD.png'],
+          'WHI': ['WHI.png', 'Vul_WHI.png', 'Res_WHI.png', 'Rel_WHI.png']}
 
 
-groups = {'Combined': ['WHI.png', 'VUL.png', 'RES.png', 'REL.png']}
+# groups = {'Combined': ['WHI.png', 'VUL.png', 'RES.png', 'REL.png']}
 
 
 # 'WHI_C.png'
 
 def main():
-    cimp_group = CIMPGroup(r'F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts')
+    cimp_group = CIMPGroup(r'F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round4\picharts\charts')
     cimp_group.set_cimps()
 
-    output_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round3\picharts_stictched"
+    output_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\Round4\picharts\charts\stitched"
 
     stuff_folder = r"F:\Watershed_Works\2103 Mar 2021\1_PiExcel\4_PolygonToRaster\stitching_stuff2"
     legend_path = os.path.join(stuff_folder, "legend.png")
